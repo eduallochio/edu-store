@@ -10,21 +10,22 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model category {
-  id String @id @defoul(uuid())
+model Category {
+  id String @id @default(uuid())
   name String
   slug String
   imageUrl String
-  product Product[]
+  products Product[]
 }
 
-model product {
-  id String @id @defoul(uuid())
+model Product {
+  id String @id @default(uuid())
   name String
   slug String
   decription String
   basePrice Decimal @db.Decimal(8,2)
-  imageUrl String
+  imageUrls String []
+  categoryId String
   category Category @relation(fields: [categoryId], references: [id])
-  discountPercentage Int @defoul(0)
+  discountPercentage Int @default(0)
 }
