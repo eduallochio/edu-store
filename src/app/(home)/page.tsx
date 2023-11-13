@@ -4,7 +4,7 @@ import Carigories from "./components/categories";
 import ProductList from "./components/product-list";
 import { prismaClient } from "@/lib/prisma";
 
-export default  async function Home() {
+export default async function Home() {
     const deals = await prismaClient.product.findMany({
         where: {
             discountPercentage: {
