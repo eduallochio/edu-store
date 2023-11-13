@@ -1,4 +1,4 @@
-import Carigories from "./components/categories";
+import Categories from "./components/categories";
 import ProductList from "./components/product-list";
 import { prismaClient } from "@/lib/prisma";
 import PromoBanner from "./components/promo-banner";
@@ -36,7 +36,7 @@ export default async function Home() {
                 alt="Até 55% de desconto esse mês!"
             />
             <div className="px-5">
-                <Carigories />
+                <Categories />
             </div>
 
             <div>

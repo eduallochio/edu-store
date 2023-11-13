@@ -1,5 +1,5 @@
 import ProductItem from "@/components/ui/product-item";
-import { computeProductotalPrice } from "@/helpers/product";
+import { computeProducTotalPrice } from "@/helpers/product";
 import { Product } from "@prisma/client";
 
 interface ProductListProps {
@@ -12,7 +12,7 @@ const ProductList = ({ products }: ProductListProps) => {
         {products.map((product) => (
             <ProductItem
                 key={product.id}
-                product={computeProductotalPrice(product)}
+                product={computeProducTotalPrice(product)}
             />
         ))}
     </div>
