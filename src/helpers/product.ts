@@ -3,7 +3,7 @@ import { Product } from "@prisma/client";
  export interface ProductWithTotalPrice extends Product {
 	totalPrice: number
 }
-export const computeProducTotalPrice = (
+export const computeProductTotalPrice = (
 	product: Product
 ): ProductWithTotalPrice => {
 	if (product.discountPercentage === 0) {
