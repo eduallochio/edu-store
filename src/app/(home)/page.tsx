@@ -1,8 +1,8 @@
 import Categories from "./components/categories";
-import ProductList from "./components/product-list";
 import { prismaClient } from "@/lib/prisma";
-import SectionTitle from "../../components/ui/selection-title";
 import PromoBanner from "./components/promo-banner";
+import ProductList from "@/components/ui/product-list";
+import SectionTitle from "@/components/ui/selection-title";
 
 export default async function Home() {
     const deals = await prismaClient.product.findMany({
