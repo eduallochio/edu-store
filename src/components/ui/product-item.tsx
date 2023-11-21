@@ -6,7 +6,7 @@ import { Badge } from "./badge";
 interface ProductItemProps {
 	product: ProductWithTotalPrice
 }
-const ProductItem = ({ product }: ProductItemProps) => {
+const  ProductItem = ({ product }: ProductItemProps) => {
 	return (
 		<div className="flex max-w-[156px] flex-col gap-4">
 			<div className="relative flex h-[170px] w-[156px] items-center justify-center rounded-lg bg-accent">
